@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+<head> 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <title>Document</title>
 </head>
-
 <body>
   <div class="ui container" style="margin-top: 20px;">
     <h1 class="ui header"> Liderboard </h1>
     <div class="ui divider"></div>
 
-    <table class="ui celled table">
+    <table class="ui celled table ">
       <thead>
         <tr>
+          <th>Id</th>
           <th>Name</th>
           <th>Age</th>
           <th>Job</th>
-          <th style="width: 100px;">Actions</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="tbody">
         <tr>
+          <td data-label="id">1</td>
           <td data-label="Name">James</td>
           <td data-label="Age">24</td>
           <td data-label="Job">Engineer</td>
           <td data-label="Actions">
             <button class="ui icon button">
-              <i class="trash icon"></i>
+              <i class="edit icon"></i>
             </button>
+            EDIT
+          </td>
           </td>
         </tr>
       </tbody>
       <tfoot class="full-width">
         <tr>
-          <th colspan="6">
+          <th colspan="4" style="text-align: center;">
 
             <div class="ui input">
               <input id="name" type="text" placeholder="Name">
@@ -52,14 +53,34 @@
               <input id="job" type="text" placeholder="Job">
             </div>
 
-            <div class="ui small primary labeled icon button">
-              <i class="user icon"></i> Add User
+            <button class="ui small primary labeled icon button add-user" id="addU">
+              <i class="user icon"></i> ADD USER
+            </button>
+          </th>
+        </tr>
+        <tr>
+          <th colspan="4" style="text-align: center;">
+            <div class="ui input">
+              <input id="ide" type="number" placeholder="ID EDIT">
             </div>
+            <button id="idebtn" class="ui icon primary button">
+              <i class="edit icon"></i>
+              EDIT
+            </button>
+
+            <div class="ui input">
+              <input id="idd" type="number" placeholder="ID DELETE">
+            </div>
+            <button id="iddbtn" class="ui icon primary button">
+              <i class="trash icon"></i>
+              DELETE
+            </button>
           </th>
         </tr>
       </tfoot>
     </table>
   </div>
-  <script src="./client.js"></script>
+  
 </body>
+<script src="./client.js"></script>
 </html>
